@@ -1,0 +1,13 @@
+<p>Inicio de sesion</p>
+
+<form [formGroup]="loginForm">
+    <label for="">Correo:</label>
+    <input type="email" formControlName="email">
+    <br>
+    <label for="">Contraseña</label>
+    <input type="password" formControlName="password">
+    <br>
+    <button [disabled]="!loginForm.valid" (click)="ingresar()">Ingresar</button>
+</form>
+<p>{{ loginForm.valid }}</p>
+<p>{{ loginForm.value | json}}</p>

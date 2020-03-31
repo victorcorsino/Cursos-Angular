@@ -1,0 +1,20 @@
+<h2>Lista de categorias</h2>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>DESCRIPCION</td>
+        <td>ACCIONES</td>
+    </tr>
+    <tr *ngFor="let cat of categorias;let i=index">
+        <td>{{ cat.id }}</td>
+        <td>{{ cat.nombre }}</td>
+        <td>{{ cat.descripcion }}</td>
+        <td>
+            <a routerLink="/admin/categoria/{{ cat.id }}/modificar">editar</a>
+            <button (click)="eliminar(cat.id)">x</button>
+        </td>
+    </tr>
+
+</table>

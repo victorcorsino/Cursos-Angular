@@ -1,0 +1,23 @@
+
+<h2>publicaciones</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TITULO</th>
+            <th>DESCRIPCION</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of publicaciones">
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+            <td>
+                <button>x</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

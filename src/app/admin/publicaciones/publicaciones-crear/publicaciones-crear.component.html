@@ -1,0 +1,13 @@
+<p>publicaciones-crear works!</p>
+
+<form [formGroup]="publicacionForm">
+    <label for="">TITULO:</label>
+    <input type="text" formControlName="title">
+    <br>
+    <label for="">Contenido:</label>
+    <textarea type="text" formControlName="body"></textarea>
+    <br>
+   
+    <button [disabled]="!publicacionForm.valid" (click)="guardar()">Guardar</button>
+</form>
+<p>{{ publicacionForm.value | json }}</p>
